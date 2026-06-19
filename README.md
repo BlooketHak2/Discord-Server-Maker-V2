@@ -1,16 +1,66 @@
-# React + Vite
+# Discord Server Maker V3
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a web app I’m building to make it easier to create Discord server setups (templates). Instead of setting up everything manually in Discord, you can build a server layout here and save it.
 
-Currently, two official plugins are available:
+It handles things like channels, roles, and permissions, and stores everything so you can reuse or edit it later.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## What this does
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Create Discord server templates
+- Add channels (text + voice)
+- Add roles with permissions
+- Save everything to your account
+- Edit or delete templates anytime
+- Simple login system
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech I’m using
+
+- React (Vite)
+- Firebase (Auth + Firestore)
+- JavaScript
+
+---
+
+## How it’s structured
+
+Inside `src/` you’ll find:
+
+- `App.jsx` – main UI
+- `firebase.js` – Firebase setup
+- `auth.js` – login/signup logic
+- `templates.js` – handles saving/loading templates
+
+---
+
+## Login
+
+You can:
+- Sign up with email and password
+- Log in and stay signed in
+- Your data is linked to your account
+
+---
+
+## Templates
+
+Each template saves things like:
+
+- Server name
+- Channels list
+- Roles list
+- Permissions for roles
+- User ID (so it belongs to you)
+
+Everything is stored in Firestore under a `templates` collection.
+
+---
+
+## Running locally
+
+```bash
+npm install
+npm run dev
