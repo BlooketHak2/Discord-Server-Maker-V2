@@ -1,4 +1,4 @@
-# Discord Server Maker V3
+# Discord Server Maker V2
 
 This is a web app I’m building to make it easier to create Discord server setups (templates). Instead of setting up everything manually in Discord, you can build a server layout here and save it.
 
